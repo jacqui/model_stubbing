@@ -93,7 +93,6 @@ module ModelStubbing
     end
     
     def insert
-      Fixtures.cache_for_connection(connection).delete(@model_class.table_name) if defined?(Fixtures)
       purge
       @stubs.values.each &:insert
     end

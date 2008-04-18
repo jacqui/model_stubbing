@@ -51,7 +51,7 @@ module ModelStubbing
     
     def insert(attributes = {})
       object = record(attributes)
-      connection.insert_fixture(object.stubbed_attributes, model.model_class.table_name)
+      connection.execute "INSERT INTO #{model.model_class.table_name} (#{object.stubbed_attributes.key_list}) VALUES (#{object.stubbed_attributes.value_list})", 'Fixture Insert'
     end
     
     def with(attributes)
