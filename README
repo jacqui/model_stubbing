@@ -1,6 +1,8 @@
 model_stubbing
 ==============
 
+This is a Rails 1.2.x compatible version of technoweenie's model_stubbing plugin. It has very minor changes from the original version. Rails 2 refactored Fixtures a bit which is caused the incompatibility.
+
 Creates in-memory versions of models for testing.  This attempts to solve a
 few problems with ActiveRecord Fixtures:
 
